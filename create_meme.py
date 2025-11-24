@@ -103,5 +103,5 @@ def create_statistics_meme(
                 bbox_inches='tight', pad_inches=0.1)
     plt.close()
     
-    print(f"Statistics meme saved to: {output_path}")
+    # print(f"Statistics meme saved to: {output_path}")
 

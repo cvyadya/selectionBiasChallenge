@@ -4,7 +4,7 @@ subtitle: "Creating a Statistics Meme"
 format:
   html: default
 execute:
-  echo: true
+  echo: false
   eval: true
 ---
 
