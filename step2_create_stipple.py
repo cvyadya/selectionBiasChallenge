@@ -4,6 +4,7 @@ Uses blue noise stippling to convert the image into a pattern of dots.
 """
 
 import numpy as np
+from typing import Tuple
 from importance_map import compute_importance
 from stippling_functions import void_and_cluster
 
@@ -18,7 +19,7 @@ def create_stipple(
     extreme_threshold_low: float = 0.2,
     extreme_threshold_high: float = 0.8,
     extreme_sigma: float = 0.1,
-) -> tuple[np.ndarray, np.ndarray]:
+) -> Tuple[np.ndarray, np.ndarray]:
     """
     Create a blue noise stippling pattern from a grayscale image.
     

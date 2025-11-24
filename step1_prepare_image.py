@@ -6,12 +6,13 @@ while maintaining aspect ratio.
 
 import numpy as np
 from PIL import Image
+from typing import Tuple, Optional
 
 
 def prepare_image(
     img_path: str,
     max_size: int = 512,
-    target_size: tuple[int, int] | None = None
+    target_size: Optional[Tuple[int, int]] = None
 ) -> np.ndarray:
     """
     Load an image, convert to grayscale, and resize to appropriate dimensions
@@ -24,7 +25,7 @@ def prepare_image(
     max_size : int
         Maximum dimension (width or height) if target_size is None.
         Image will be resized to fit within this size while maintaining aspect ratio.
-    target_size : tuple[int, int] | None
+    target_size : Optional[Tuple[int, int]]
         Optional target size (width, height). If provided, image will be resized
         to this size. If None, uses max_size to determine dimensions.
     

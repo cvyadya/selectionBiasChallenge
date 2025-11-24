@@ -5,6 +5,7 @@ distribution of brightness values, which can be used to tune stippling parameter
 """
 
 import numpy as np
+from typing import Tuple, Dict
 
 
 def create_tonal(
@@ -12,7 +13,7 @@ def create_tonal(
     grid_rows: int = 16,
     grid_cols: int = 12,
     return_full_image: bool = True
-) -> tuple[np.ndarray, np.ndarray, dict]:
+) -> Tuple[np.ndarray, np.ndarray, Dict]:
     """
     Create a tonal analysis by dividing the image into a grid and computing
     average brightness in each section. This helps identify tone distribution

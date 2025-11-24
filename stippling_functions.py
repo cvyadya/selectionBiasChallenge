@@ -3,6 +3,7 @@ Blue noise stippling functions using a modified void-and-cluster algorithm.
 """
 
 import numpy as np
+from typing import Optional
 from importance_map import compute_importance
 
 
@@ -44,7 +45,7 @@ def void_and_cluster(
     percentage: float = 0.08,
     sigma: float = 0.9,
     content_bias: float = 0.9,
-    importance_img: np.ndarray | None = None,
+    importance_img: Optional[np.ndarray] = None,
     noise_scale_factor: float = 0.1,
 ):
     """
@@ -65,7 +66,7 @@ def void_and_cluster(
         Scales the importance of image content in the energy field.
         Higher values (0.8-0.95) prioritize following the importance map;
         lower values allow more uniform spatial distribution.
-    importance_img : np.ndarray | None
+    importance_img : Optional[np.ndarray]
         Optional precomputed importance map (same shape as input).
         If None, importance is computed automatically from the input image.
     noise_scale_factor : float
